@@ -1,0 +1,40 @@
+h1{
+    font-size: 2.5em;
+    text-align: center;
+}
+.entrada{
+    display: flex;
+    gap: 1.5em;
+    width: 100%;
+    margin: 100px;
+}
+input{
+    width: 800px;
+    height: 50px;
+    font-size: 1em;
+}
+button{
+    width: 30%;
+    border: none;
+    border-radius: 100vw;
+    background-color: wheat;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgb(236, 230, 220);
+}
+.salida{
+    width: 100%;
+}
+.comentario{
+    padding: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    border-bottom: 1px solid gray;
+}
+
+.comentario:hover {
+    background-color: bisque;
+}
