@@ -7,8 +7,19 @@ document.addEventListener('DOMContentLoaded', function(){
         if(comentario.value.trim() !== '') {
             const nuevoComentario = document.createElement('div');
             nuevoComentario.className = 'comentario';
-            nuevoComentario.textContent = comentario.value;
-
+            
+            const textoComentario = document.createElement('span');
+            textoComentario.className = 'texto-comentario';
+            textoComentario.textContent = comentario.value;
+            
+            dayjs.locale('es');
+            const fecha = dayjs().format('DD/MM/YYYY HH:mm');
+            const fechaElement = document.createElement('span');
+            fechaElement.className = 'fecha-comentario';
+            fechaElement.textContent = fecha;
+            
+            nuevoComentario.appendChild(textoComentario);
+            nuevoComentario.appendChild(fechaElement);
             nuevoComentario.addEventListener('click', function(){
                 let seElimina = confirm('¿Estas que quieres eliminar este comentario?')
                 if(seElimina) {
